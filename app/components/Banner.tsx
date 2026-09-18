@@ -78,7 +78,7 @@ export default function Banner(): React.JSX.Element {
                   <div className="w-full h-full rounded-full bg-[#0d0118]" />
                 </div>
                 {/* Photo */}
-                <div className="relative z-10 w-[90%] h-[90%] rounded-full overflow-hidden border-2 border-purple-500/30">
+                <div className="relative z-10 w-[91%] h-[91%] rounded-full overflow-hidden border-2 border-purple-500/30">
                   <Image
                     src="/assets/me.png"
                     alt="Tejas Borade - Full Stack MERN Developer"
