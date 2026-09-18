@@ -71,14 +71,22 @@ export default function Banner(): React.JSX.Element {
 
               {/* Profile Graphic */}
               <div className="relative w-[220px] h-[220px] xs:w-[260px] xs:h-[260px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] mx-auto flex items-center justify-center">
-                <Image
-                  src="/assets/me.png"
-                  alt="Tejas Borade - Full Stack MERN Developer"
-                  width={320}
-                  height={320}
-                  className="max-w-full h-auto object-contain"
-                  priority
-                />
+                {/* Outer glow ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-violet-500 to-indigo-500 opacity-60 blur-xl animate-pulse" />
+                {/* Gradient border ring */}
+                <div className="absolute inset-0 rounded-full p-[3px] bg-gradient-to-tr from-purple-400 via-violet-500 to-indigo-400">
+                  <div className="w-full h-full rounded-full bg-[#0d0118]" />
+                </div>
+                {/* Photo */}
+                <div className="relative z-10 w-[90%] h-[90%] rounded-full overflow-hidden border-2 border-purple-500/30">
+                  <Image
+                    src="/assets/me.png"
+                    alt="Tejas Borade - Full Stack MERN Developer"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
