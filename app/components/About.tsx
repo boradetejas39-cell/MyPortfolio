@@ -1,5 +1,50 @@
+import React from "react";
+import {
+  SiReact,
+  SiHtml5,
+  SiJavascript,
+  SiNodedotjs,
+  SiExpress,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiMongoose,
+  SiMysql,
+  SiPython,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiNpm,
+  SiAnthropic,
+  SiReplit,
+} from "react-icons/si";
+import {
+  TbDevices,
+  TbLayout,
+  TbApi,
+  TbLayersIntersect,
+  TbPlugConnected,
+  TbTable,
+  TbChartDots3,
+  TbSql,
+  TbBrandVscode,
+  TbBrandCss3,
+} from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
+import { RxCursorArrow } from "react-icons/rx";
+
+interface SkillItem {
+  name: string;
+  icon: React.ReactNode;
+}
+
+interface SkillCategory {
+  category: string;
+  icon: React.ReactNode;
+  skills: SkillItem[];
+}
+
 export default function About(): React.JSX.Element {
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       category: "Frontend Development",
       icon: (
@@ -7,7 +52,14 @@ export default function About(): React.JSX.Element {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      skills: ["React.js", "HTML5", "CSS3", "JavaScript (ES6+)", "Responsive Design", "UI/UX Layouts"],
+      skills: [
+        { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
+        { name: "HTML5", icon: <SiHtml5 className="text-[#E34F26]" /> },
+        { name: "CSS3", icon: <TbBrandCss3 className="text-[#1572B6]" /> },
+        { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+        { name: "Responsive Design", icon: <TbDevices className="text-purple-300" /> },
+        { name: "UI/UX Layouts", icon: <TbLayout className="text-pink-400" /> },
+      ],
     },
     {
       category: "Backend & APIs",
@@ -16,7 +68,14 @@ export default function About(): React.JSX.Element {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
         </svg>
       ),
-      skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "Middleware", "API Integration"],
+      skills: [
+        { name: "Node.js", icon: <SiNodedotjs className="text-[#5FA04E]" /> },
+        { name: "Express.js", icon: <SiExpress className="text-gray-200" /> },
+        { name: "RESTful APIs", icon: <TbApi className="text-sky-400" /> },
+        { name: "JWT Authentication", icon: <SiJsonwebtokens className="text-[#D63AFF]" /> },
+        { name: "Middleware", icon: <TbLayersIntersect className="text-purple-300" /> },
+        { name: "API Integration", icon: <TbPlugConnected className="text-emerald-400" /> },
+      ],
     },
     {
       category: "Databases",
@@ -25,7 +84,13 @@ export default function About(): React.JSX.Element {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
         </svg>
       ),
-      skills: ["MongoDB", "Mongoose ODM", "MySQL", "Relational Schema", "Data Aggregation"],
+      skills: [
+        { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+        { name: "Mongoose ODM", icon: <SiMongoose className="text-[#E74C3C]" /> },
+        { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
+        { name: "Relational Schema", icon: <TbTable className="text-amber-400" /> },
+        { name: "Data Aggregation", icon: <TbChartDots3 className="text-fuchsia-400" /> },
+      ],
     },
     {
       category: "Programming Languages",
@@ -34,7 +99,12 @@ export default function About(): React.JSX.Element {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       ),
-      skills: ["JavaScript", "Java", "Python", "SQL"],
+      skills: [
+        { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+        { name: "Java", icon: <FaJava className="text-[#EA2D2E]" /> },
+        { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
+        { name: "SQL", icon: <TbSql className="text-cyan-400" /> },
+      ],
     },
     {
       category: "Tools & Version Control",
@@ -44,7 +114,16 @@ export default function About(): React.JSX.Element {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      skills: ["Git", "GitHub", "VS Code", "Cursor", "Postman", "npm", "Claude", "Replit"],
+      skills: [
+        { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
+        { name: "GitHub", icon: <SiGithub className="text-white" /> },
+        { name: "VS Code", icon: <TbBrandVscode className="text-[#007ACC]" /> },
+        { name: "Cursor", icon: <RxCursorArrow className="text-violet-400" /> },
+        { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
+        { name: "npm", icon: <SiNpm className="text-[#CB3837]" /> },
+        { name: "Claude", icon: <SiAnthropic className="text-[#D97706]" /> },
+        { name: "Replit", icon: <SiReplit className="text-[#F26207]" /> },
+      ],
     },
   ];
 
@@ -110,9 +189,12 @@ export default function About(): React.JSX.Element {
                   {cat.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="text-[11px] sm:text-xs px-2.5 py-1 rounded-lg bg-purple-950/40 text-purple-200 border border-purple-500/20 hover:border-purple-400/50 hover:bg-purple-900/30 transition-all font-mono"
+                      className="group/skill inline-flex items-center gap-1.5 text-[11px] sm:text-xs px-2.5 py-1 rounded-lg bg-purple-950/40 text-purple-200 border border-purple-500/20 hover:border-purple-400/50 hover:bg-purple-900/30 hover:text-white transition-all font-mono"
                     >
-                      {skill}
+                      <span className="text-xs sm:text-sm flex-shrink-0 transition-transform duration-200 group-hover/skill:scale-115">
+                        {skill.icon}
+                      </span>
+                      <span>{skill.name}</span>
                     </span>
                   ))}
                 </div>
