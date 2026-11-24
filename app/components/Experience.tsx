@@ -25,6 +25,7 @@ const experienceCards: ExperienceCard[] = [
       "Built and contributed to real-world client projects, developing scalable and responsive web applications using the MERN stack.",
     points: [
       "Developed and integrated RESTful APIs with MongoDB for efficient data handling and seamless frontend-backend communication.",
+      "Worked on business platforms like Spireeta, structuring service-based architectures for ERP, cybersecurity, and automation solutions.",
       "Optimized application performance and responsiveness, ensuring fast load times and smooth user interactions.",
     ],
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],

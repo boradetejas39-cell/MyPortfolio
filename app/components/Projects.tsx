@@ -12,6 +12,32 @@ interface Project {
 
 const featuredProjects: Project[] = [
   {
+    id: 5,
+    tag: "Healthcare SaaS & AI Platform",
+    title: "CareBridge+ – Healthcare Referral & Clinical SaaS Platform",
+    subtitle: "React • TypeScript • Node.js • Express • Firebase",
+    description:
+      "A full-stack healthcare referral and clinical operations SaaS platform with 4 role-based portals (Admin, Hospital, Clinic, Patient) unifying clinic-to-hospital referrals, OPD queues, billing, real-time clinical chat, and Gemini AI-powered clinical assistance.",
+    bullets: [
+      "Built 4 role-based portals (Admin, Hospital, Clinic, Patient) supporting clinic-to-hospital referrals, OPD queues, billing, and real-time clinical chat using React, TypeScript, Node.js, Express, and Firestore.",
+      "Integrated Google Gemini API for AI medical report scanning, smart diagnosis/prescription assistance, and medication coaching with IP rate limiting, retry/fallback models, and a rule-based clinical backup engine.",
+      "Implemented Razorpay subscription billing with server-side payment verification, webhooks, automated trial-expiry jobs, transactional emails (Nodemailer), and analytics/PDF exports (Recharts, jsPDF).",
+      "Hardened security and performance with custom Firestore Security Rules (RBAC, privilege-escalation protection, strict referral state-transition guards), 15-minute inactivity auto-logout, and Vite lazy-loaded code splitting.",
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Firebase / Firestore",
+      "Google Gemini API",
+      "Razorpay",
+      "Recharts & jsPDF",
+    ],
+    githubUrl: "https://github.com/boradetejas39-cell",
+    liveUrl: "https://carebridgeplus.tech/",
+  },
+  {
     id: 1,
     tag: "AI & Full Stack Engineering",
     title: "AI-Powered Smart Recruitment Assistant",
@@ -178,7 +204,93 @@ export default function Projects(): React.JSX.Element {
                       isEven ? "lg:col-start-1 lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    {project.id === 1 ? (
+                    {project.id === 5 ? (
+                      /* CareBridge+ Healthcare SaaS UI Preview */
+                      <div className="relative rounded-2xl p-1 bg-gradient-to-br from-cyan-500/40 via-teal-600/20 to-sky-700/40 shadow-2xl">
+                        <div className="rounded-xl bg-slate-950 p-4 sm:p-5 border border-cyan-500/20 overflow-hidden">
+                          {/* Mock window bar */}
+                          <div className="flex flex-wrap items-center justify-between gap-1.5 pb-3 mb-4 border-b border-white/10">
+                            <div className="flex items-center gap-1.5">
+                              <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                            </div>
+                            <span className="text-[10px] sm:text-[11px] font-mono text-cyan-300 truncate max-w-[150px] sm:max-w-none">
+                              carebridgeplus.tech
+                            </span>
+                            <span className="text-[9px] sm:text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">
+                              Clinical SaaS
+                            </span>
+                          </div>
+
+                          {/* Role-Based Portals Strip */}
+                          <div className="flex flex-wrap gap-1.5 mb-4">
+                            <span className="text-[10px] px-2.5 py-1 rounded-full bg-cyan-600/30 text-cyan-200 border border-cyan-400/40 font-medium">
+                              Hospital
+                            </span>
+                            <span className="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-white/70 border border-white/10">
+                              Clinic
+                            </span>
+                            <span className="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-white/70 border border-white/10">
+                              Patient
+                            </span>
+                            <span className="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-white/70 border border-white/10">
+                              Admin
+                            </span>
+                          </div>
+
+                          {/* Gemini AI Clinical Assistant Banner */}
+                          <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2 mb-4 bg-gradient-to-r from-cyan-950/60 to-teal-950/40 p-3 rounded-lg border border-cyan-500/20">
+                            <div>
+                              <p className="text-[10px] sm:text-xs text-cyan-300/80">Gemini AI Clinical Engine</p>
+                              <p className="text-xs sm:text-sm font-semibold text-white">Report Scan & Rx Assistant</p>
+                            </div>
+                            <span className="text-[10px] font-bold px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 whitespace-nowrap">
+                              Fallback Ready
+                            </span>
+                          </div>
+
+                          {/* Referral & OPD Queue Cards */}
+                          <div className="space-y-2.5">
+                            <div className="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center justify-between gap-2">
+                              <div className="min-w-0">
+                                <p className="text-xs font-semibold text-white truncate">Cardiology Referral #CB-408</p>
+                                <p className="text-[10px] text-white/60 truncate">Clinic → City Hospital • OPD Queue #04</p>
+                              </div>
+                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 flex-shrink-0">
+                                Admitted
+                              </span>
+                            </div>
+
+                            <div className="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center justify-between gap-2">
+                              <div className="min-w-0">
+                                <p className="text-xs font-semibold text-white truncate">Real-Time Clinical Chat</p>
+                                <p className="text-[10px] text-white/60 truncate">Firestore Sync • Lab PDF Exported</p>
+                              </div>
+                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 flex-shrink-0">
+                                Live
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Security & Billing Footer Bar */}
+                          <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-3 gap-1.5 sm:gap-2 text-center">
+                            <div className="bg-white/5 p-1.5 sm:p-2 rounded">
+                              <p className="text-[9px] sm:text-[10px] text-white/50">Security</p>
+                              <p className="text-[11px] sm:text-xs font-bold text-cyan-300">RBAC Rules</p>
+                            </div>
+                            <div className="bg-white/5 p-1.5 sm:p-2 rounded">
+                              <p className="text-[9px] sm:text-[10px] text-white/50">Billing</p>
+                              <p className="text-[11px] sm:text-xs font-bold text-emerald-400">Razorpay</p>
+                            </div>
+                            <div className="bg-white/5 p-1.5 sm:p-2 rounded">
+                              <p className="text-[9px] sm:text-[10px] text-white/50">Portals</p>
+                              <p className="text-[11px] sm:text-xs font-bold text-sky-300">4 Roles</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : project.id === 1 ? (
                       /* AI Recruitment Assistant UI Preview */
                       <div className="relative rounded-2xl p-1 bg-gradient-to-br from-purple-500/40 via-violet-600/20 to-indigo-700/40 shadow-2xl">
                         <div className="rounded-xl bg-slate-950 p-4 sm:p-5 border border-purple-500/20 overflow-hidden">
